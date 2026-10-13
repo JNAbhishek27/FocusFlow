@@ -1,0 +1,10 @@
+class: StudySubject
+table: study_subjects
+fields:
+  name: String
+  colorHex: String
+  iconName: String
+  createdAt: DateTime
+indexes:
+  study_subjects_name_idx:
+    fields: name

@@ -1,0 +1,15 @@
+class: StudyTask
+table: study_tasks
+fields:
+  subjectId: int, relation(parent=study_subjects)
+  title: String
+  notes: String?
+  priority: TaskPriority
+  estimatedMinutes: int
+  isCompleted: bool
+  dueDate: DateTime?
+  createdAt: DateTime
+  completedAt: DateTime?
+indexes:
+  study_tasks_subject_idx:
+    fields: subjectId

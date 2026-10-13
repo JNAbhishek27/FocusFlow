@@ -1,0 +1,8 @@
+class: PlannerDashboardSummary
+fields:
+  totalSubjects: int
+  pendingTasks: int
+  completedTasks: int
+  totalFocusMinutes: int
+  todayFocusMinutes: int
+  averageProductivityScore: double

@@ -1,0 +1,6 @@
+enum: TaskPriority
+values:
+  - low
+  - medium
+  - high
+  - urgent

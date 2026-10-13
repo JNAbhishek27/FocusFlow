@@ -1,0 +1,14 @@
+class: FocusSession
+table: focus_sessions
+fields:
+  subjectId: int?, relation(parent=study_subjects)
+  taskId: int?, relation(parent=study_tasks)
+  durationMinutes: int
+  completedAt: DateTime
+  reflectionNotes: String?
+  productivityScore: int
+indexes:
+  focus_sessions_subject_idx:
+    fields: subjectId
+  focus_sessions_completed_at_idx:
+    fields: completedAt

@@ -1,0 +1,27 @@
+emailIdp:
+  - login:
+  - startRegistration:
+  - verifyRegistrationCode:
+  - finishRegistration:
+  - startPasswordReset:
+  - verifyPasswordResetCode:
+  - finishPasswordReset:
+  - hasAccount:
+jwtRefresh:
+  - refreshAccessToken:
+greeting:
+  - hello:
+dashboard:
+  - getSummary:
+focusSession:
+  - recordSession:
+  - getRecentSessions:
+subject:
+  - getSubjects:
+  - createSubject:
+  - deleteSubject:
+task:
+  - getTasks:
+  - createTask:
+  - toggleTaskCompletion:
+  - deleteTask:

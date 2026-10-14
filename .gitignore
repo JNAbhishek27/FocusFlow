@@ -17,3 +17,17 @@ pubspec_overrides.yaml
 
 # Serverpod Cloud CLI
 .scloud/
+
+# Environment and secrets
+.env
+.env.*
+*.env
+config/passwords.yaml
+**/passwords.yaml
+**/firebase_service_account_key.json
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+

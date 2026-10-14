@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: focus_flow
-      POSTGRES_PASSWORD: "mQpETbe1AfTr1WNJ4UwKZ6xaJ6QA5vK_"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-}"
     volumes:
       - focus_flow_data:/var/lib/postgresql/data
 
@@ -15,7 +15,7 @@ services:
     image: redis:6.2.6
     ports:
       - "8091:6379"
-    command: redis-server --requirepass "BrvLOo6HDZe_8OyVreFbUkmABCJtgg57"
+    command: redis-server --requirepass "${REDIS_PASSWORD:-}"
     environment:
       - REDIS_REPLICATION_MODE=master
 
@@ -27,7 +27,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: focus_flow_test
-      POSTGRES_PASSWORD: "vHuIvRiopJtlyscRe8Otjj0St2PukY2E"
+      POSTGRES_PASSWORD: "${POSTGRES_TEST_PASSWORD:-}"
     volumes:
       - focus_flow_test_data:/var/lib/postgresql/data
 
@@ -35,7 +35,7 @@ services:
     image: redis:6.2.6
     ports:
       - "9091:6379"
-    command: redis-server --requirepass "90yQQDiA98UvfAIn5qnMs-m47Yo8g6mz"
+    command: redis-server --requirepass "${REDIS_TEST_PASSWORD:-}"
     environment:
       - REDIS_REPLICATION_MODE=master
 

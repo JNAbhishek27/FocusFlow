@@ -11,11 +11,17 @@ web/app
 # Directory created by dartdoc
 doc/api/
 
-# Passwords file
+# Passwords and secrets
 config/passwords.yaml
+config/passwords_*.yaml
+.env
+.env.*
+*.env
 
 # Firebase service account key for Firebase auth
 config/firebase_service_account_key.json
+*.pem
+*.key
 
 # Embedded PostgreSQL runtime artifacts (data dir, sockets, pidfiles)
 .serverpod/
